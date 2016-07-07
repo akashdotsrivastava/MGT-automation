@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageMGT.master.cs" Inherits="MasterPageMGT" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<!--<body style="background-image: url(./IMAGES/Background2.jpg);">-->
+    <body>
+    <form id="form1" runat="server">
+        <div class="page-header container-fluid">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <asp:Image runat="server" ID="logo" ImageUrl="./IMAGES/logo-with-tag.png" Height="100px" Width="240px" />
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 text-center">
+                <h2 style="color: black"><b>MICROMATIC GRINDING TECHNOLOGIES LTD, GHAZIABAD</b></h2>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <asp:LinkButton ID="Home" runat="server" PostBackUrl="~/Default.aspx" CausesValidation="false" CssClass="btn btn-default btn-block  " Text="HOME"></asp:LinkButton>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <asp:LinkButton ID="AdminPanel" runat="server" PostBackUrl="~/admin.aspx" CausesValidation="false" CssClass="btn btn-default btn-block" Text="ADMIN PANEL"></asp:LinkButton>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <asp:LinkButton ID="InputMode" runat="server" PostBackUrl="~/assembly.aspx" CausesValidation="false" CssClass="btn btn-default btn-block" Text="INPUT MODE"></asp:LinkButton>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <asp:LinkButton ID="ViewModes" runat="server" PostBackUrl="~/svHome.aspx" CausesValidation="false" CssClass="btn btn-default btn-block" Text="VIEWING MODES"></asp:LinkButton>
+                </div>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+  </asp:ScriptManager>
+        </asp:ContentPlaceHolder>
+        <div class="row"></div>
+    </form>
+</body>
+</html>
